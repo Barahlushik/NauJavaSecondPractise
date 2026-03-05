@@ -4,6 +4,7 @@ import org.example.cli.CliMenu;
 import org.example.cli.CliTask;
 import org.example.cli.impl.FirstTask;
 import org.example.cli.impl.SecondTask;
+import org.example.cli.impl.ThirdTask;
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
 import org.jline.terminal.Terminal;
@@ -24,7 +25,8 @@ public class Main {
 
         List<CliTask> tasks = List.of(
                 new FirstTask(),
-                new SecondTask()
+                new SecondTask(),
+                new ThirdTask()
         );
 
         CliMenu cli = new CliMenu(tasks);

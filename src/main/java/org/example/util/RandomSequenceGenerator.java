@@ -18,6 +18,9 @@ public final class RandomSequenceGenerator {
     }
 
     public static List<Double> generateDoubleList(int size) {
+        if (size < 0) {
+            throw new IllegalArgumentException("Подбери значения в диапазоне [0; бесконечность)");
+        }
         List<Double> list = new ArrayList<>(size);
         new Random().doubles(size).forEach(list::add);
         return list;
