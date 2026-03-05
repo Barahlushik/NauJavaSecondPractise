@@ -3,6 +3,7 @@ package org.example;
 import org.example.cli.CliMenu;
 import org.example.cli.CliTask;
 import org.example.cli.impl.FirstTask;
+import org.example.cli.impl.FourthTask;
 import org.example.cli.impl.SecondTask;
 import org.example.cli.impl.ThirdTask;
 import org.jline.reader.LineReader;
@@ -26,7 +27,8 @@ public class Main {
         List<CliTask> tasks = List.of(
                 new FirstTask(),
                 new SecondTask(),
-                new ThirdTask()
+                new ThirdTask(),
+                new FourthTask()
         );
 
         CliMenu cli = new CliMenu(tasks);
