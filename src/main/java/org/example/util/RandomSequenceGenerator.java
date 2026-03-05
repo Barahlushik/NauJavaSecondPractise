@@ -1,5 +1,7 @@
 package org.example.util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public final class RandomSequenceGenerator {
@@ -13,5 +15,11 @@ public final class RandomSequenceGenerator {
         return new Random()
                 .ints(size)
                 .toArray();
+    }
+
+    public static List<Double> generateDoubleList(int size) {
+        List<Double> list = new ArrayList<>(size);
+        new Random().doubles(size).forEach(list::add);
+        return list;
     }
 }
