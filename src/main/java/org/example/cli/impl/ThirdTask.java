@@ -22,8 +22,10 @@ public class ThirdTask implements CliTask {
 
         List<Employee> employees = createEmployees();
         System.out.println("Сотрудники:");
-        employees.forEach(e ->
-                System.out.println(e.getFullName() + ", " + e.getDepartment() + ", " + e.getSalary()));
+        employees.forEach(e -> System.out.printf("%s, %s, %.0f%n",
+                e.getFullName(),
+                e.getDepartment(),
+                e.getSalary()));
 
         List<String> result = employeeService.convertToNameDepartment(employees);
         System.out.println("\nРезультат маппинга:");
