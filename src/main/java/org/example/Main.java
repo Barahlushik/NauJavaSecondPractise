@@ -1,17 +1,35 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import org.example.cli.CliMenu;
+import org.example.cli.CliTask;
+import org.example.cli.impl.*;
+import org.jline.reader.LineReader;
+import org.jline.reader.LineReaderBuilder;
+import org.jline.terminal.Terminal;
+import org.jline.terminal.TerminalBuilder;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        Terminal terminal = TerminalBuilder.builder()
+                .system(true)
+                .build();
+
+        LineReader reader = LineReaderBuilder.builder()
+                .terminal(terminal)
+                .build();
+
+        List<CliTask> tasks = List.of(
+                new FirstTask(),
+                new SecondTask(),
+                new ThirdTask(),
+                new FourthTask(),
+                new FifthTask()
+        );
+
+        CliMenu cli = new CliMenu(tasks);
+        cli.start(reader);
     }
 }

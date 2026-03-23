@@ -1,7 +1,7 @@
 
 # Практические задания (вариант №4)
 
-## Задание 1 — Работа с массивом
+## 1. Работа с массивом. [Код](https://github.com/Barahlushik/NauJavaSecondPractise/tree/feature/practice-tasks/src/main/java/org/example/first)
 
 ### Условие
 Заполните массив (тип элементов `int`) случайными числами и выполните задание в соответствии со своим вариантом.
@@ -23,7 +23,7 @@ n — количество элементов в формируемом масс
 
 ---
 
-## Задание 2 — Работа со списками
+## 2. Работа со списками. [Код](https://github.com/Barahlushik/NauJavaSecondPractise/tree/feature/practice-tasks/src/main/java/org/example/second)
 
 ### Условие
 Заполните список (тип `ArrayList<Double>`) случайными числами и отсортируйте его.
@@ -49,7 +49,7 @@ n — количество элементов в формируемом спис
 
 ---
 
-## Задание 3 — Stream API
+## 3. Stream API. [Код](https://github.com/Barahlushik/NauJavaSecondPractise/tree/feature/practice-tasks/src/main/java/org/example/third)
 
 ### Условие
 Необходимо обработать список с использованием **Stream API**.
@@ -92,7 +92,7 @@ n — количество элементов в формируемом спис
 
 ---
 
-## Задание 4 — HTTP клиент и JSON
+## 4. HTTP клиент и JSON. [Код](https://github.com/Barahlushik/NauJavaSecondPractise/tree/feature/practice-tasks/src/main/java/org/example/fourth)
 
 ### Условие
 Необходимо сделать **GET запрос** на указанный адрес и обработать ответ.
@@ -113,7 +113,7 @@ n — количество элементов в формируемом спис
 
 ---
 
-## Задание 5 — Реализация интерфейса Task
+## 5. Реализация интерфейса Task. [Код](https://github.com/Barahlushik/NauJavaSecondPractise/tree/feature/practice-tasks/src/main/java/org/example/fifth)
 
 ### Условие
 Необходимо реализовать интерфейс: Task.java
@@ -125,8 +125,16 @@ n — количество элементов в формируемом спис
 
 Метод `start()` начинает чтение и обработку данных из очереди, а `stop()` останавливает процесс.
 
+## ЗАПУСК
+Рабочая ветка: `feature/practice-tasks`
 
+Jar-ник собирается командой:
 
+```mvn clean package```
+
+и запускается (в корне проекта):
+
+```java -jar target/SecondPractise.jar```
 
 
 
