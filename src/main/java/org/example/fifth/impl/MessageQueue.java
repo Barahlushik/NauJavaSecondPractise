@@ -28,7 +28,6 @@ public class MessageQueue implements Task {
             }
         }
 
-        System.out.println("Очередь сообщений пустует.");
     }
 
     @Override
