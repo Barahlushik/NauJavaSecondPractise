@@ -4,8 +4,6 @@ import org.example.cli.CliTask;
 import org.example.third.Employee;
 import org.example.third.EmployeeService;
 import org.jline.reader.LineReader;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ThirdTask implements CliTask {

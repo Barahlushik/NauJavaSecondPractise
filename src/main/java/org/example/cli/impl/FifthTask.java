@@ -7,6 +7,7 @@ import org.jline.reader.LineReader;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class FifthTask implements CliTask {
 
@@ -24,8 +25,15 @@ public class FifthTask implements CliTask {
         "Куда пойдет?",
         "Не знаю, а куда бы ты пошел?")));
 
-        t.start();
-
-        // if *condition* => t.stop()
+        Thread queueWorker = new Thread(t::start);
+        queueWorker.start();
+        Random random = new Random();
+        try {
+            int delay = 1000 + random.nextInt(4000);
+            Thread.sleep(delay);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        t.stop();
     }
 }
